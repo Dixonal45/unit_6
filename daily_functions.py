@@ -60,10 +60,24 @@ print(has22([1, 2, 3, 4, 5, 2, 2]))
 
 
 def is_sorted(nums):
+    while True:
+        for x in range(1, len(nums)):
+            if nums[x - 1] > nums[x]:
+                return False
+        return True
+
+
+print(is_sorted(["b", "a"]))
+
+# problem 6
+
+
+def remove_duplicates(nums):
     for x in range(len(nums)):
-        if nums[x] <= nums[x + 1]:
-            return True
-    return False
+        for y in range(x + 1, len(nums)):
+            if nums[x] == nums[y]:
+                del (y)
+    return nums
 
 
-print(is_sorted([1, 2, 6, 3, 4, 5]))
+print(remove_duplicates([1, 2, 3, 3]))
