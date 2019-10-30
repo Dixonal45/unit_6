@@ -1,5 +1,5 @@
 # created by Allison Dixon
-# last updated October 28, 2019
+# last updated October 30, 2019
 # unit 6 daily functions
 
 # problem 1 prints names from the list in different orders
@@ -73,11 +73,37 @@ print(is_sorted(["b", "a"]))
 
 
 def remove_duplicates(nums):
-    for x in range(len(nums)):
-        for y in range(x + 1, len(nums)):
-            if nums[x] == nums[y]:
-                del (y)
-    return nums
+    removed = []
+    for x in nums:
+        if x not in removed:
+            removed.append(x)
+    return removed
 
 
-print(remove_duplicates([1, 2, 3, 3]))
+print(remove_duplicates([2, 2, 3, 4, 9, 9]))
+
+# problem 7
+
+
+def get_max(nums):
+    biggest_num = nums[0]
+    for x in nums:
+        if x > biggest_num:
+            biggest_num = x
+    return biggest_num
+
+
+print(get_max([-6, -9, 48, -89]))
+
+# problem 8
+
+
+def get_min(nums):
+    smallest_num = nums[0]
+    for x in nums:
+        if x < smallest_num:
+            smallest_num = x
+    return smallest_num
+
+
+print(get_min([-6, -4443, 48, -89]))
