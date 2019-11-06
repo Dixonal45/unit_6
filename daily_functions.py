@@ -106,4 +106,4 @@ def get_min(nums):
     return smallest_num
 
 
-print(get_min([-6, -4443, 48, -89]))
+print(get_min([-6, -4443, 48, -86]))
